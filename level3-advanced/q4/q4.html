@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs Component</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>My Tabs Component</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="details">Details</button>
+      <button class="tab-btn" data-tab="reviews">Reviews</button>
+    </div>
+
+    <div class="tab-content">
+      <div class="tab-panel active" id="overview">
+        <h2>Overview</h2>
+        <p>Welcome to the overview section.</p>
+      </div>
+
+      <div class="tab-panel" id="details">
+        <h2>Details</h2>
+        <p>Here you can find more details.</p>
+      </div>
+
+      <div class="tab-panel" id="reviews">
+        <h2>Reviews</h2>
+        <p>Read what people say about us.</p>
+      </div>
+    </div>
+  </body>
+</html>
