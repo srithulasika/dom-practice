@@ -1,4 +1,3 @@
-
 // Select HTML elements
 
 const taskForm = document.querySelector("#taskForm");
@@ -24,11 +23,18 @@ const categoryButtons = document.querySelectorAll("[data-category]");
 
 // Task data
 
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("taskflowTasks")) || [];
+
 let editingTaskId = null;
 
 let currentFilter = "all";
 let currentCategory = "all";
+
+// Save tasks to localStorage
+
+function saveTasks() {
+    localStorage.setItem("taskflowTasks", JSON.stringify(tasks));
+}
 
 // Show add task form
 
@@ -120,6 +126,7 @@ taskForm.addEventListener("submit", (event) => {
         tasks.unshift(newTask);
     }
 
+    saveTasks();
     renderTasks();
     resetForm();
 });
@@ -275,6 +282,8 @@ taskList.addEventListener("click", (event) => {
 
     if (action === "toggle") {
         task.completed = !task.completed;
+
+        saveTasks();
         renderTasks();
     }
 
@@ -306,6 +315,8 @@ taskList.addEventListener("click", (event) => {
             (item) => item.id !== taskId
         );
 
+        saveTasks();
+
         if (editingTaskId === taskId) {
             resetForm();
         }
@@ -335,5 +346,7 @@ function updateStatistics() {
     document.querySelector("#completionRate").textContent =
         completionRate + "%";
 }
+
+// Display saved tasks when the page loads
 
 renderTasks();
