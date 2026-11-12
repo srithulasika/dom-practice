@@ -1,98 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaskFlow - Task Manager</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div class="app-container">
-
-    <!--sidebar-->
-    <aside class="sidebar">
-      <div class="logo">
-        <h2>TaskFlow</h2>
-      </div>
-      <nav class="sidebar-menu">
-      <h4>MENU</h4>
-      <a href="#" class="active">All Tasks</a>
-      <a href="#">Pending</a>
-      <a href="#">Completed</a>
-      </nav>
-
-    <!--Categories-->
-
-      <div class="categories">
-        <h4>CATEGORIES</h4>
-        <p>Work</p>
-        <p>Personal</p>
-        <p>Study</p>
-        <p>Other</p>
-      </div>
-    </aside>
-
-    <!--Main Content-->
-    <main class="main-content">
-      <header class="top-header">
-        <div>
-          <h1>My Tasks</h1>
-          <p>Manage your work and stay productive.</p>
-        </div>
-        <button id="addTaskBtn"> + Add New Task</button>
-      </header>
-
-      <!--Dashboard Statistics-->
-
-      <section class="Stats-grid">
-        <article class="stat-card">
-          <h3>Total Tasks</h3>
-          <p id="totalTasks">0</p>
-        </article>
-
-        <article class="stat-card">
-          <h3>Pending Tasks</h3>
-          <p id="pendingTasks">0</p>
-        </article>
-
-        <article class="stat-card">
-          <h3>Completed Tasks</h3>
-          <p id="completionRate">0%</p>
-        </article>
-      </section>
-
-      <!--Task Form-->
-
-      <section class="form-section" id="formSection">
-        <h2>Create New Task</h2>
-      </section>
-
-
-      <!--Task Overview-->
-
-      <section class="tasks-section">
-        <div class="task-heading">
-          <h2>Task Overview</h2>
-
-          <input type="search" id="searchInput" placeholder="Search tasks...">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>TaskFlow</h2>
         </div>
 
-        <!--Task Filters-->
+        <nav class="sidebar-menu">
+          <h4>MENU</h4>
 
-        <div class="filters">
-          <button>All</button>
-          <button>Pending</button>
-          <button>Completed</button>
+          <a href="#" data-filter="all" class="active">All Tasks</a>
+          <a href="#" data-filter="pending">Pending</a>
+          <a href="#" data-filter="completed">Completed</a>
+        </nav>
+
+        <!-- Categories -->
+
+        <div class="categories">
+          <h4>CATEGORIES</h4>
+
+          <button type="button" data-category="all" class="active">
+            All Categories
+          </button>
+
+          <button type="button" data-category="Work">Work</button>
+          <button type="button" data-category="Personal">Personal</button>
+          <button type="button" data-category="Study">Study</button>
+          <button type="button" data-category="Other">Other</button>
         </div>
+      </aside>
 
+      <!--Main Content-->
+      <main class="main-content">
+        <header class="top-header">
+          <div>
+            <h1>My Tasks</h1>
+            <p>Manage your work and stay productive.</p>
+          </div>
+          <button id="addTaskBtn">+ Add New Task</button>
+        </header>
 
-        <!--Task Cards-->
-        <div class="task-grid" id="taskList">
+        <!--Dashboard Statistics-->
 
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
+        <!-- Dashboard Statistics -->
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+          </article>
+
+          <article class="stat-card">
+            <h3>Pending Tasks</h3>
+            <p id="pendingTasks">0</p>
+          </article>
+
+          <article class="stat-card">
+            <h3>Completed Tasks</h3>
+            <p id="completedTasks">0</p>
+          </article>
+
+          <article class="stat-card">
+            <h3>Completion Rate</h3>
+            <p id="completionRate">0%</p>
+          </article>
+        </section>
+
+        <!--Task Form-->
+
+        <section class="form-section" id="formSection">
+          <h2 id="formTitle">Create New Task</h2>
+          <form id="taskForm">
+            <div class="form-group">
+              <label for="taskTitle">Task Title</label>
+              <input
+                type="text"
+                id="taskTitle"
+                placeholder="Enter task title"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="taskDescription">Description</label>
+              <textarea
+                id="taskDescription"
+                placeholder="Enter task description"
+                rows="3"
+                maxlength="500"
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="taskCategory">Category</label>
+                <select id="taskCategory">
+                  <option value="Work">Work</option>
+                  <option value="Personal">Personal</option>
+                  <option value="Study">Study</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority">
+                  <option value="High">High</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="taskDueDate">Due Date</label>
+                <input type="date" id="taskDueDate" required />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Add Task</button>
+              <button type="button" id="cancelBtn">Cancel</button>
+            </div>
+          </form>
+        </section>
+
+        <!--Task Overview-->
+
+        <section class="tasks-section">
+          <div class="task-heading">
+            <h2>Task Overview</h2>
+
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search tasks..."
+            />
+          </div>
+
+          <!--Task Filters-->
+
+          <div class="filters">
+            <button>All</button>
+            <button>Pending</button>
+            <button>Completed</button>
+          </div>
+
+          <!--Task Cards-->
+          <div class="task-grid" id="taskList"></div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
