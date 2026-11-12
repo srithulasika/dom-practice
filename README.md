@@ -1,8 +1,8 @@
 # DOM Practice Projects 🚀
 
-A collection of 23 hands-on projects and exercises completed while learning HTML, CSS, JavaScript, and DOM manipulation.
+A collection of **23 hands-on projects and exercises** completed while learning HTML, CSS, JavaScript, and DOM manipulation.
 
-This repository documents my learning journey from basic DOM operations to corporate-level web applications.
+This repository documents my learning journey from basic DOM operations to advanced interactive web applications.
 
 ## 📚 Learning Levels
 
@@ -60,7 +60,7 @@ This repository documents my learning journey from basic DOM operations to corpo
 
 ## 📂 Repository Structure
 
-
+```text
 dom-practice/
 │
 ├── README.md
@@ -84,16 +84,16 @@ dom-practice/
 │   ├── q7-character-counter/
 │   └── q8-localstorage-greeting/
 │
-├── level3-advanced/
-│   ├── q1-todo-app/
-│   ├── q2-registration-validation/
-│   ├── q3-filter-gallery/
-│   ├── q4-tabs-component/
-│   ├── q5-quiz-app/
-│   ├── q6-shopping-cart/
-│   ├── q7-live-search/
-│   └── q8-modal-popup/
-│
+└── level3-advanced/
+    ├── q1-todo-app/
+    ├── q2-registration-validation/
+    ├── q3-filter-gallery/
+    ├── q4-tabs-component/
+    ├── q5-quiz-app/
+    ├── q6-shopping-cart/
+    ├── q7-live-search/
+    └── q8-modal-popup/
+```
 
 *Each question is maintained in its own folder with separate HTML, CSS, and JavaScript files where applicable.*
 
@@ -113,12 +113,10 @@ Screenshots of completed projects are maintained inside their respective project
 - Build responsive layouts using CSS.
 - Practice Git version control and GitHub workflows.
 
-
 ## 👩‍💻 Author
 
 **Sri Thulasika**
 
 GitHub: [@srithulasika](https://github.com/srithulasika)
 
-
-⭐ This repository represents my continuous learning journey in frontend web development, from basic DOM manipulation to practical web applications.
+⭐ This repository represents my continuous learning journey in frontend web development, from basic DOM manipulation to advanced interactive web applications.
