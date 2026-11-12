@@ -1,6 +1,6 @@
 # DOM Practice Projects 🚀
 
-A collection of 26 hands-on projects and exercises completed while learning HTML, CSS, JavaScript, and DOM manipulation.
+A collection of 23 hands-on projects and exercises completed while learning HTML, CSS, JavaScript, and DOM manipulation.
 
 This repository documents my learning journey from basic DOM operations to corporate-level web applications.
 
@@ -43,14 +43,6 @@ This repository documents my learning journey from basic DOM operations to corpo
 | Q6 | Shopping Cart | Cart management, total calculation |
 | Q7 | Live City Search | Search filtering, input events |
 | Q8 | Modal Popup | Events, Escape key, outside click |
-
-### 🔴 Level 4 – Corporate Level (3 Projects)
-
-| No. | Project | Features |
-|---|---|---|
-| Q1 | Task Manager | Categories, priorities, due dates, search, edit, delete, localStorage |
-| Q2 | Job Application Form | Multi-section validation, error summary, draft saving |
-| Q3 | Expense Tracker | Income, expenses, balance, filtering, localStorage, GitHub Pages |
 
 ## 🛠️ Technologies Used
 
@@ -102,11 +94,6 @@ dom-practice/
 │   ├── q7-live-search/
 │   └── q8-modal-popup/
 │
-└── level4-corporate/
-    ├── task-manager/
-    ├── application-form/
-    └── expense-tracker/
-
 
 *Each question is maintained in its own folder with separate HTML, CSS, and JavaScript files where applicable.*
 
@@ -125,14 +112,7 @@ Screenshots of completed projects are maintained inside their respective project
 - Store and retrieve data using LocalStorage.
 - Build responsive layouts using CSS.
 - Practice Git version control and GitHub workflows.
-- Deploy web applications using GitHub Pages.
 
-## 🌐 Live Projects
-
-### Expense Tracker
-[View Live Expense Tracker](https://srithulasika.github.io/dom-practice/level4-corporate/expense-tracker/)
-
-*Update this link after enabling GitHub Pages.*
 
 ## 👩‍💻 Author
 
@@ -140,6 +120,5 @@ Screenshots of completed projects are maintained inside their respective project
 
 GitHub: [@srithulasika](https://github.com/srithulasika)
 
----
 
 ⭐ This repository represents my continuous learning journey in frontend web development, from basic DOM manipulation to practical web applications.
