@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Task Manager</title>
+  <link rel="style.css" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+
+    <!--sidebar-->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>TaskFlow</h2>
+      </div>
+      <nav class="sidebar-menu">
+      <h4>MENU</h4>
+      <a href="#" class="active">All Tasks</a>
+      <a href="#">Pending</a>
+      <a href="#">Completed</a>
+      </nav>
+
+    <!--Categories-->
+
+      <div class="categories">
+        <h4>CATEGORIES</h4>
+        <p>Work</p>
+        <p>Personal</p>
+        <p>Study</p>
+        <p>Other</p>
+      </div>
+    </aside>
+
+    <!--Main Content-->
+    <main class="main-content">
+      <header class="top-header">
+        <div>
+          <h1>My Tasks</h1>
+          <p>Manage your work and stay productive.</p>
+        </div>
+        <button id="addTaskBtn"> + Add New Task</button>
+      </header>
+
+      <!--Dashboard Statistics-->
+
+      <section class="Stats-grid">
+        <article class="stat-grid">
+          <h3>Total Tasks</h3>
+          <p id="totalTasks">0</p>
+        </article>
+
+        <article class="stat-card">
+          <h3>Pending Tasks</h3>
+          <p id="pendingTasks">0</p>
+        </article>
+
+        <article class="stat-card">
+          <h3>Completed Tasks</h3>
+          <p id="completionRate">0%</p>
+        </article>
+      </section>
+
+      <!--Task Form-->
+
+      <section class="form-section" id="formSection">
+        <h2>Create New Task</h2>
+      </section>
+
+
+      <!--Task Overview-->
+
+      <section class="tasks-section">
+        <div class="task-heading">
+          <h2>Task Overview</h2>
+
+          <input type="search" id="searchInput" placeholder="Search tasks...">
+        </div>
+
+        <!--Task Filters-->
+
+        <div class="filters">
+          <button>All</button>
+          <button>Pending</button>
+          <button>Completed</button>
+        </div>
+
+
+        <!--Task Cards-->
+        <div class="task-grid" id="taskList">
+
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
