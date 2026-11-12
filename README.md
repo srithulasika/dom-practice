@@ -130,7 +130,7 @@ Screenshots of completed projects are maintained inside their respective project
 ## 🌐 Live Projects
 
 ### Expense Tracker
-[View Live Expense Tracker](https://YOUR-USERNAME.github.io/dom-practice/level4-corporate/expense-tracker/)
+[View Live Expense Tracker](https://srithulasika.github.io/dom-practice/level4-corporate/expense-tracker/)
 
 *Update this link after enabling GitHub Pages.*
 
